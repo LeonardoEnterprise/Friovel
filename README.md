@@ -1,27 +1,45 @@
-# Friovel
+# Friovel Distribuidora de Alimentos Ltda
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.
+## Sobre Nós
 
-## Development server
+Iniciamos nossa jornada no mundo da distribuição de alimentos em 1982, com o objetivo de fornecer produtos de qualidade superior para nossos clientes. Ao longo dos anos, crescemos e expandimos nossas operações para atender diversas regiões do Paraná e Santa Catarina.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Nossa missão é levar produtos da melhor qualidade, de marcas consagradas no mercado e empresas de grande gabarito e conceito junto ao consumidor. Fazemos isso com paixão, carinho e um compromisso inabalável com a satisfação do cliente.
 
-## Code scaffolding
+## Valores Fundamentais
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Na Friovel, acreditamos em valores que moldam nossa empresa e nossa cultura:
 
-## Build
+- **Qualidade**: Comprometemo-nos com a excelência, oferecendo produtos de alta qualidade aos nossos clientes.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Compromisso**: Estamos empenhados em atender às necessidades dos nossos clientes e em superar as suas expectativas.
 
-## Running unit tests
+- **Inovação**: Buscamos constantemente novas maneiras de melhorar e inovar em nossos serviços e produtos.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Integridade**: Operamos com honestidade, transparência e respeito em todas as nossas interações.
 
-## Running end-to-end tests
+## Nossos Produtos
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Atuamos no setor de distribuição de uma ampla gama de produtos, incluindo:
 
-## Further help
+- Produtos Lácteos
+- Frigorificados
+- Produtos para Panificação
+- Confeitaria
+- Sorveteria
+- Food Service
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Como Contribuir
+
+Se você está interessado em contribuir para nossos projetos ou colaborar conosco, ficaremos felizes em discutir possibilidades de parceria. Sinta-se à vontade para entrar em contato com nossa equipe de suporte.
+
+## Contato
+
+Para mais informações sobre nossos produtos e serviços, entre em contato conosco:
+
+- **Website**: [www.friovel.com.br](http://www.friovel.com.br)
+- **E-mail**: info@friovel.com.br
+
+Agradecemos por visitar nosso repositório. Estamos ansiosos para continuar a servir nossos clientes e contribuir para o mercado de alimentos com excelência e integridade.
+
+_Última Atualização: [01/09/2023]_
