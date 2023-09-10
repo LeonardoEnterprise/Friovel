@@ -2,8 +2,10 @@ html,
 body {
   width: 100%;
   height: 100%;
-  margin: 0; /* Remover margens padrão */
-  padding: 0; /* Remover preenchimento padrão */
+  margin: 0;
+  /* Remover margens padrão */
+  padding: 0;
+  /* Remover preenchimento padrão */
 }
 
 h1 {
@@ -13,7 +15,8 @@ h1 {
   font-size: 3rem;
   font-style: normal;
   font-weight: 800;
-  line-height: 2rem; /* 100% */
+  line-height: 2rem;
+  /* 100% */
 }
 
 .btn_blue {
@@ -26,7 +29,8 @@ h1 {
   padding: 0.5rem 1rem;
   border-radius: 2.6875rem;
   cursor: pointer;
-  text-align: center; /* Alinha o texto à esquerda dentro do botão */
+  text-align: center;
+  /* Alinha o texto à esquerda dentro do botão */
   outline: none;
 }
 
@@ -40,46 +44,59 @@ h1 {
   padding: 0.5rem 1rem;
   border-radius: 2.6875rem;
   cursor: pointer;
-  text-align: center; /* Alinha o texto à esquerda dentro do botão */
+  text-align: center;
+  /* Alinha o texto à esquerda dentro do botão */
   outline: none;
 }
 
-.btn_blue .btn_text, .btn_orange .btn_text {
-  flex: 1; /* Distribui o espaço disponível entre o texto e a imagem */
-  margin-right: 0.5rem; /* Adiciona espaço entre o texto e a imagem */
+.btn_blue .btn_text,
+.btn_orange .btn_text {
+  flex: 1;
+  /* Distribui o espaço disponível entre o texto e a imagem */
+  margin-right: 0.5rem;
+  /* Adiciona espaço entre o texto e a imagem */
   font-size: 1rem;
   font-weight: 600;
 }
 
-.btn_blue img, .btn_orange img {
-  width: 1.5rem; /* Define a largura da imagem para o mesmo tamanho da fonte */
-  height: 1.5rem; /* Define a altura da imagem para o mesmo tamanho da fonte */
+.btn_blue img,
+.btn_orange img {
+  width: 1.5rem;
+  /* Define a largura da imagem para o mesmo tamanho da fonte */
+  height: 1.5rem;
+  /* Define a altura da imagem para o mesmo tamanho da fonte */
 }
 
 .logo {
   flex-shrink: 0;
-  margin-right: 20px; /* Espaçamento entre logos */
+  margin-right: 20px;
+  /* Espaçamento entre logos */
 }
 
 //! Parte do carrosel inicial
 .outdoor {
   position: relative;
   //  height: 45rem; /* Defina a altura desejada */
-  width: 100%; /* Defina a largura horizontal */
-  background-color: var(--principal-color); /* Apenas para visualização */
+  width: 100%;
+  /* Defina a largura horizontal */
+  background-color: var(--principal-color);
+  /* Apenas para visualização */
 }
 
 .bar {
-  height: 10px; /* Defina a altura desejada para as barras */
+  height: 10px;
+  /* Defina a altura desejada para as barras */
   width: 100%;
 }
 
 .top-bar {
-  background-color: var(--principal-color); /* Cor da barra superior */
+  background-color: var(--principal-color);
+  /* Cor da barra superior */
 }
 
 .bottom-bar {
-  background-color: var(--principal-color); /* Cor da barra inferior */
+  background-color: var(--principal-color);
+  /* Cor da barra inferior */
 }
 
 .image-container {
@@ -98,10 +115,14 @@ h1 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 4rem; /* Defina a largura desejada para os botões */
-  height: 4rem; /* Defina a altura desejada para os botões */
-  background-color: var(--white-color); /* Apenas para visualização */
-  border: none; /* Remove a borda padrão do botão */
+  width: 4rem;
+  /* Defina a largura desejada para os botões */
+  height: 4rem;
+  /* Defina a altura desejada para os botões */
+  background-color: var(--white-color);
+  /* Apenas para visualização */
+  border: none;
+  /* Remove a borda padrão do botão */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,11 +131,13 @@ h1 {
 }
 
 .btn_outdoor_left {
-  left: 10px; /* Ajuste a posição do botão esquerdo */
+  left: 10px;
+  /* Ajuste a posição do botão esquerdo */
 }
 
 .btn_outdoor_right {
-  right: 10px; /* Ajuste a posição do botão direito */
+  right: 10px;
+  /* Ajuste a posição do botão direito */
 }
 
 
@@ -124,18 +147,21 @@ h1 {
   margin-left: 4rem;
 }
 
-.history_h1{
+.history_h1 {
   margin-top: 4rem;
 }
 
 .history_content {
   display: flex;
-  flex-direction: row; /* Ou column se desejar empilhar verticalmente */
-  align-items: center; /* Ajusta o alinhamento vertical */
+  flex-direction: row;
+  /* Ou column se desejar empilhar verticalmente */
+  align-items: center;
+  /* Ajusta o alinhamento vertical */
 }
 
 .history_p {
-  flex: 1; /* Ocupa o espaço restante */
+  flex: 1;
+  /* Ocupa o espaço restante */
   font-weight: 20;
 }
 
@@ -145,8 +171,10 @@ h1 {
 
 .span_principal {
   color: var(--principal-color, #fea012);
-  font-weight: bold; /* Deixa o texto em negrito */
-  text-decoration: underline; /* Adiciona um traço embaixo do texto */
+  font-weight: bold;
+  /* Deixa o texto em negrito */
+  text-decoration: underline;
+  /* Adiciona um traço embaixo do texto */
 }
 
 //! Parte da atuação
@@ -154,7 +182,7 @@ h1 {
 .operation {
   display: flex;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
   margin-left: 4rem;
 }
 
@@ -183,6 +211,7 @@ h1 {
   flex: 1;
   padding: 2rem;
   text-align: center;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 .operation_img img {
@@ -203,28 +232,33 @@ h1 {
 
 
 @mixin white-gradient {
-	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 $animationSpeed: 40s;
 
 // Animation
 @keyframes scroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 7))}
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 7))
+  }
 }
 
-.partners{
+.partners {
   margin-top: 6rem;
 }
 
-.line_blue{
+.line_blue {
   background-color: var(--secundary-color);
   height: 2rem;
   width: 100%;
 }
 
-.line_yellow{
+.line_yellow {
   background-color: var(--principal-color);
   height: 1rem;
   width: 100%;
@@ -232,46 +266,46 @@ $animationSpeed: 40s;
 
 // Styling
 .slider {
-	background: white;
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-	height: 100px;
-	margin: auto;
-	overflow:hidden;
-	position: relative;
-	width: 100%;
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 
-	&::before,
-	&::after {
-		@include white-gradient;
-		content: "";
-		height: 100px;
-		position: absolute;
-		width: 200px;
-		z-index: 2;
-	}
+  &::before,
+  &::after {
+    @include white-gradient;
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
 
-	&::after {
-		right: 0;
-		top: 0;
-		transform: rotateZ(180deg);
-	}
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
 
-	&::before {
-		left: 0;
-		top: 0;
-	}
+  &::before {
+    left: 0;
+    top: 0;
+  }
 
-	.slide-track {
+  .slide-track {
     animation: scroll $animationSpeed linear infinite;
-		display: flex;
-		width: calc(250px * 14);
-	}
+    display: flex;
+    width: calc(250px * 14);
+  }
 
-	.slide {
-		height: 100px;
-		width: 250px;
+  .slide {
+    height: 100px;
+    width: 250px;
     margin-right: 5rem;
-	}
+  }
 }
 
 //! Parte faq de perguntas
@@ -281,15 +315,13 @@ $animationSpeed: 40s;
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  background-color: var(--secundary-color);
   gap: 10px;
 }
 
-.faq{
-  margin-top: 7rem;
+.faq {
+  margin-top: 4rem;
 }
 
 .faq-item {
@@ -297,40 +329,62 @@ $animationSpeed: 40s;
 }
 
 .question {
+
   font-size: 18px;
-  font-weight: bold;
-  color: var(--black-color);
-  background-color: var(--principal-color);
-  height: 3rem;
-    border-radius: 1rem 1rem 0rem 0rem;
-    display: flex;
-    flex-direction: column; /* Garante que os elementos estejam empilhados verticalmente */
-    justify-content: center; /* Alinha horizontalmente no centro */
-    margin-left: 1rem;
+  color: var(--white-color);
+  background-color: var(--secundary-color);
+  height: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* Garante que os elementos estejam empilhados verticalmente */
+  justify-content: center;
+  /* Alinha horizontalmente no centro */
+  margin-left: 1rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 20px;
 }
 
 .answer {
   font-size: 16px;
   font-weight: bold;
   color: var(--black-color);
-  background-color: var(--white-color);
-  height: 3rem;
-    border-radius: 0 0 1rem 1rem;
-    display: flex;
-    flex-direction: column; /* Garante que os elementos estejam empilhados verticalmente */
-    justify-content: center; /* Alinha horizontalmente no centro */
-    margin-left: 1rem;
+  background-color: var(--principal-color);
+  height: 5rem;
+  border-radius: 0 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  /* Garante que os elementos estejam empilhados verticalmente */
+  justify-content: center;
+  /* Alinha horizontalmente no centro */
+  margin-left: 1rem;
 }
 
-.margin_faq{
+.margin_faq {
   font-size: 18px;
   font-weight: bold;
   color: var(--black-color);
   height: 3rem;
-    border-radius: 1rem 1rem 0rem 0rem;
-    display: flex;
-    flex-direction: column; /* Garante que os elementos estejam empilhados verticalmente */
-    justify-content: center; /* Alinha horizontalmente no centro */
-    margin-left: 1rem;
+  border-radius: 1rem 1rem 0rem 0rem;
+  display: flex;
+  flex-direction: column;
+  /* Garante que os elementos estejam empilhados verticalmente */
+  justify-content: center;
+  /* Alinha horizontalmente no centro */
+  margin-left: 1rem;
 
+}
+
+.txt_faq{
+  margin-left: 3rem;
+}
+
+.btn_faq{
+  height: 4rem ;
+}
+
+.question.clicked{
+  border-radius: 1rem 1rem 0 0;
 }

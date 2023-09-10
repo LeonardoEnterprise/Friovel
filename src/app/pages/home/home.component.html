@@ -102,9 +102,15 @@
     <div class="operation_txt">
       <h1>Atuação</h1>
       <p class="operation_p">
-        A Friovel atua hoje em diversas cidades nos estados do Paraná e Santa
-        Catarina. Encontre o representantes mais próximo de você e faça bons
-        negócios.
+        A Friovel Distribuidora de Alimentos cresceu significativamente ao longo dos anos. Ela expandiu suas operações
+        para diversas regiões do Brasil, atendendo uma ampla gama de produtos, incluindo lácteos, frigorificados,
+        produtos para panificação, confeitaria, sorveteria e food service.
+        <br><br>
+        Atualmente, a empresa tem um Centro de Distribuição centralizado em Pato Branco, no Paraná, de onde atende o
+        sudoeste, oeste, centro-oeste e sul do Paraná, bem como o oeste de Santa Catarina. Seu compromisso com produtos
+        de alta qualidade e marcas renomadas, juntamente com seu foco no atendimento ao cliente, fazem dela uma presença
+        notável e confiável no mercado nacional. <br><br><strong>A Friovel é movida pela paixão em oferecer o melhor aos seus clientes,
+          mantendo seu compromisso com a excelência em todas as regiões do Brasil.</strong> 
       </p>
       <div class="btn_group">
         <button class="btn_blue">
@@ -125,13 +131,12 @@
     <div class="line_yellow"></div>
     <div class="slider">
       <div class="slide-track">
-          <div *ngFor="let logo of logos; let i = index" class="slide">
-            <a target="_blank" href="{{logo.href}}"><img [src]="logo.src" [alt]="logo.alt" height="95"
-                width="140" /></a>
-          </div>
-          <div *ngFor="let logo of logos; let i = index" class="slide">
-            <a target="_blank" href="{{logo.href}}"><img [src]="logo.src" [alt]="logo.alt" height="95" width="140" /></a>
-          </div>
+        <div *ngFor="let logo of logos; let i = index" class="slide">
+          <a target="_blank" href="{{logo.href}}"><img [src]="logo.src" [alt]="logo.alt" height="95" width="140" /></a>
+        </div>
+        <div *ngFor="let logo of logos; let i = index" class="slide">
+          <a target="_blank" href="{{logo.href}}"><img [src]="logo.src" [alt]="logo.alt" height="95" width="140" /></a>
+        </div>
       </div>
     </div>
     <div class="line_yellow"></div>
@@ -142,19 +147,19 @@
     <div class="faq-container">
       <h1>Perguntas Frequentes</h1>
       <div class="faq-item" *ngFor="let question of faqList">
-        <div class="question" (click)="toggleAnswer(question)">
-          <h2 class="question">{{ question.question }}</h2>
+        <div class="question" [class.clicked]="question.isClicked" (click)="toggleAnswer(question)">
+          <h2 class="question txt_faq">{{ question.question }}</h2>
         </div>
         <div class="answer" *ngIf="question.showAnswer">
-          <p class="answer">{{ question.answer }}</p>
+          <p class="answer txt_faq">{{ question.answer }}</p>
         </div>
       </div>
       <div class="margin_faq">
-        <button class="btn_orange">
+        <button class="btn_orange btn_faq">
           <span class="btn_text">Entre em contato</span>
           <img src="../assets/icons/cellphone.svg" alt="" />
         </button>
-        </div>
+      </div>
     </div>
   </section>
 

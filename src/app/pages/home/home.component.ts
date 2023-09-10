@@ -73,14 +73,15 @@ export class HomeComponent {
   }
 
   faqList = [
-    { question: 'O que é Angular?', answer: 'Angular é um framework de desenvolvimento web...', showAnswer: false  },
-    { question: 'Como começar a usar Angular?', answer: 'Para começar com Angular, você precisa...', showAnswer: false  },
-    { question: 'Qual a versão mais recente do Angular?', answer: 'A versão mais recente do Angular é...', showAnswer: false  },
+    { question: 'O que é Angular?', answer: 'Angular é um framework de desenvolvimento web...', showAnswer: false, isClicked: false  },
+    { question: 'Como começar a usar Angular?', answer: 'Para começar com Angular, você precisa...', showAnswer: false, isClicked: false  },
+    { question: 'Qual a versão mais recente do Angular?', answer: 'A versão mais recente do Angular é...', showAnswer: false, isClicked: false  },
     // Adicione mais perguntas e respostas aqui
   ];
 
-  toggleAnswer(question: FaqQuestion) {
+  toggleAnswer(question: { showAnswer: boolean; isClicked: boolean; }) {
     question.showAnswer = !question.showAnswer;
+    question.isClicked = !question.isClicked;
   }
 }
 

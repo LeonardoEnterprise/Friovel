@@ -37,3 +37,17 @@
   font-weight: 700;
   line-height: 20px; /* 76.923% */
 }
+
+.is-home {
+  background-color: var(--secundary-color); /* Defina a cor de fundo desejada */
+  color: white; /* Defina a cor do texto desejada */
+  width: 120px;
+height: 60px;
+flex-shrink: 0;
+border-radius: 50px;
+
+display: flex;
+justify-content: center; /* Alinha horizontalmente no centro */
+align-items: center; /* Alinha verticalmente no centro */
+
+}
