@@ -121,12 +121,18 @@
   </section>
 
   <section class="partners">
-    <div class="carousel">
-      <div *ngFor="let logo of logos" class="logo">
-        <img [src]="logo.src" [alt]="logo.alt" />
+    <h1></h1>
+    <div class="slider">
+      <div class="slide-track" >
+        <ng-container *ngFor="let logo of logos; let rowIndex = index" #slideTrack>
+          <div *ngFor="let logo of logos; let i = index" class="slide">
+            <a target="_blank" href="{{logo.href}}"><img [src]="logo.src" [alt]="logo.alt" height="95" width="140" /></a>
+          </div>
+        </ng-container>
       </div>
     </div>
   </section>
+
 
   <section class="faq">
     <h1>Dúvidas Frequentes</h1>

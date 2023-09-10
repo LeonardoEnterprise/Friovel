@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, ElementRef, ViewChild} from '@angular/core';
 import { slideAnimation } from 'src/app/animations/slideAnimations';
+import 'slick-carousel/slick/slick.js'; // Importe o Slick Slider
+
+declare var $: any; // Declare a variável global $ para acessar o jQuery
 
 interface FaqQuestion {
   question: string;
@@ -12,13 +15,43 @@ interface FaqQuestion {
   styleUrls: ['./home.component.scss'],
   animations: [slideAnimation]
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
+
   logos = [
-    { src: 'logo1.png', alt: 'Marca 1' },
-    { src: 'logo2.png', alt: 'Marca 2' },
-    { src: 'logo3.png', alt: 'Marca 3' },
+    { src: '../assets/partnersLogos/logo1.gif', alt: 'Marca 1', href:'https://www.latcarolina.com.br/'},
+    { src: '../assets/partnersLogos/logo2.png', alt: 'Marca 2', href:'https://www.friovel.com.br/produtos/frireggio/'},
+    { src: '../assets/partnersLogos/logo3.gif', alt: 'Marca 3', href:'https://www.garoto.com.br/'},
+    { src: '../assets/partnersLogos/logo4.png', alt: 'Marca 4', href:'https://gradina.com.br/'},
+    { src: '../assets/partnersLogos/logo5.png', alt: 'Marca 5', href:'https://www.coopsantaclara.com.br/'},
+    { src: '../assets/partnersLogos/logo6.png', alt: 'Marca 6', href:'https://www.yakult.com.br/'},
+    { src: '../assets/partnersLogos/logo7.gif', alt: 'Marca 7', href:'https://saf-instant.com.br/'},
     // Adicione mais logos aqui
   ];
+
+  // logos = [...Array(3)].map(() => [...this.logosBrutas]);
+
+  @ViewChild('slideTrack', { static: false }) slideTrackElement!: ElementRef;
+
+  ngAfterViewInit() {
+    this.configureSlickSlider();
+  }
+
+  configureSlickSlider() {
+    // Use ElementRef para obter a referência ao elemento slideTrack no DOM
+    const slideTrack = this.slideTrackElement.nativeElement;
+
+    // Configuração do Slick Slider
+    $(slideTrack).slick({
+      slidesToShow: 1, // Defina o número de slides a serem mostrados
+      slidesToScroll: 1, // Defina o número de slides a serem percorridos
+      autoplay: true,
+      autoplaySpeed: 5000,
+      infinite: true, // Tornar o carrossel infinito
+      arrows: true,
+      dots: false
+      // Outras opções de configuração
+    });
+  }
 
   outdoors = [
     { src: '../assets/outdoors/Slide1.svg', alt: 'Valores da empresa' },
@@ -49,7 +82,8 @@ export class HomeComponent {
 
   ngOnInit() {
     this.startAutoSlide();
-  }
+
+    }
 
   ngOnDestroy() {
     this.stopAutoSlide();
@@ -76,3 +110,4 @@ export class HomeComponent {
     question.showAnswer = !question.showAnswer;
   }
 }
+
