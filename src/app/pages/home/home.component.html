@@ -125,11 +125,12 @@
     <div class="line_yellow"></div>
     <div class="slider">
       <div class="slide-track">
-        <ng-container *ngFor="let logo of logos; let rowIndex = index" #slideTrack>
           <div *ngFor="let logo of logos; let i = index" class="slide">
             <a target="_blank" href="{{logo.href}}"><img [src]="logo.src" [alt]="logo.alt" height="95" width="140" /></a>
           </div>
-        </ng-container>
+          <div *ngFor="let logo of logos; let i = index" class="slide">
+            <a target="_blank" href="{{logo.href}}"><img [src]="logo.src" [alt]="logo.alt" height="95" width="140" /></a>
+          </div>
       </div>
     </div>
     <div class="line_yellow"></div>
