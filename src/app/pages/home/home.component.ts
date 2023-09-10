@@ -1,6 +1,5 @@
-import { Component, OnInit, OnDestroy, AfterViewInit, ElementRef, ViewChild} from '@angular/core';
+import { Component} from '@angular/core';
 import { slideAnimation } from 'src/app/animations/slideAnimations';
-import 'slick-carousel/slick/slick.js'; // Importe o Slick Slider
 
 declare var $: any; // Declare a variável global $ para acessar o jQuery
 
@@ -15,7 +14,7 @@ interface FaqQuestion {
   styleUrls: ['./home.component.scss'],
   animations: [slideAnimation]
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent {
 
   logos = [
     { src: '../assets/partnersLogos/logo1.gif', alt: 'Marca 1', href:'https://www.latcarolina.com.br/'},
@@ -27,31 +26,6 @@ export class HomeComponent implements AfterViewInit {
     { src: '../assets/partnersLogos/logo7.gif', alt: 'Marca 7', href:'https://saf-instant.com.br/'},
     // Adicione mais logos aqui
   ];
-
-  // logos = [...Array(3)].map(() => [...this.logosBrutas]);
-
-  @ViewChild('slideTrack', { static: false }) slideTrackElement!: ElementRef;
-
-  ngAfterViewInit() {
-    this.configureSlickSlider();
-  }
-
-  configureSlickSlider() {
-    // Use ElementRef para obter a referência ao elemento slideTrack no DOM
-    const slideTrack = this.slideTrackElement.nativeElement;
-
-    // Configuração do Slick Slider
-    $(slideTrack).slick({
-      slidesToShow: 1, // Defina o número de slides a serem mostrados
-      slidesToScroll: 1, // Defina o número de slides a serem percorridos
-      autoplay: true,
-      autoplaySpeed: 5000,
-      infinite: true, // Tornar o carrossel infinito
-      arrows: true,
-      dots: false
-      // Outras opções de configuração
-    });
-  }
 
   outdoors = [
     { src: '../assets/outdoors/Slide1.svg', alt: 'Valores da empresa' },
@@ -82,7 +56,6 @@ export class HomeComponent implements AfterViewInit {
 
   ngOnInit() {
     this.startAutoSlide();
-
     }
 
   ngOnDestroy() {

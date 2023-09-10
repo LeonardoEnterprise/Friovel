@@ -206,12 +206,28 @@ h1 {
 	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 }
 
-$animationSpeed: 30s;
+$animationSpeed: 10s;
 
 // Animation
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-140px * 7))}
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+.partners{
+  margin-top: 6rem;
+}
+
+.line_blue{
+  background-color: var(--secundary-color);
+  height: 2rem;
+  width: 100%;
+}
+
+.line_yellow{
+  background-color: var(--principal-color);
+  height: 1rem;
+  width: 100%;
 }
 
 // Styling
@@ -256,4 +272,19 @@ $animationSpeed: 30s;
 		width: 250px;
     margin-right: 5rem;
 	}
+}
+
+//! Parte faq de perguntas
+
+.faq{
+  margin-top: 9rem;
+  margin-left: 6rem;
+}
+
+.question{
+background-color: var(--secundary-color);
+}
+
+.answer{
+  background-color: var(--principal-color);
 }

@@ -121,9 +121,10 @@
   </section>
 
   <section class="partners">
-    <h1></h1>
+    <div class="line_blue"></div>
+    <div class="line_yellow"></div>
     <div class="slider">
-      <div class="slide-track" >
+      <div class="slide-track">
         <ng-container *ngFor="let logo of logos; let rowIndex = index" #slideTrack>
           <div *ngFor="let logo of logos; let i = index" class="slide">
             <a target="_blank" href="{{logo.href}}"><img [src]="logo.src" [alt]="logo.alt" height="95" width="140" /></a>
@@ -131,8 +132,9 @@
         </ng-container>
       </div>
     </div>
+    <div class="line_yellow"></div>
+    <div class="line_blue"></div>
   </section>
-
 
   <section class="faq">
     <h1>Dúvidas Frequentes</h1>
