@@ -49,3 +49,17 @@ nav a:hover::after{
   width: 100%;
   color: var(--secundary-color);
 }
+
+.is-home {
+  background-color: var(--secundary-color); /* Defina a cor de fundo desejada */
+  color: white; /* Defina a cor do texto desejada */
+  width: 120px;
+height: 60px;
+flex-shrink: 0;
+border-radius: 50px;
+
+display: flex;
+justify-content: center; /* Alinha horizontalmente no centro */
+align-items: center; /* Alinha verticalmente no centro */
+
+}

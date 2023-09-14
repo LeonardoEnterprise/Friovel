@@ -131,13 +131,12 @@
     <div class="line_yellow"></div>
     <div class="slider">
       <div class="slide-track">
-          <div *ngFor="let logo of logos; let i = index" class="slide">
-            <a target="_blank" href="{{logo.href}}"><img [src]="logo.src" [alt]="logo.alt" height="95"
-                width="140" /></a>
-          </div>
-          <div *ngFor="let logo of logos; let i = index" class="slide">
-            <a target="_blank" href="{{logo.href}}"><img [src]="logo.src" [alt]="logo.alt" height="95" width="140" /></a>
-          </div>
+        <div *ngFor="let logo of logos; let i = index" class="slide">
+          <a target="_blank" href="{{logo.href}}"><img [src]="logo.src" [alt]="logo.alt" height="95" width="140" /></a>
+        </div>
+        <div *ngFor="let logo of logos; let i = index" class="slide">
+          <a target="_blank" href="{{logo.href}}"><img [src]="logo.src" [alt]="logo.alt" height="95" width="140" /></a>
+        </div>
       </div>
     </div>
     <div class="line_yellow"></div>

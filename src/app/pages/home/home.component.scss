@@ -6,6 +6,10 @@ body {
   /* Remover margens padrão */
   padding: 0;
   /* Remover preenchimento padrão */
+  margin: 0;
+  /* Remover margens padrão */
+  padding: 0;
+  /* Remover preenchimento padrão */
 }
 
 h1 {
@@ -15,6 +19,8 @@ h1 {
   font-size: 3rem;
   font-style: normal;
   font-weight: 800;
+  line-height: 2rem;
+  /* 100% */
   line-height: 2rem;
   /* 100% */
 }
@@ -375,6 +381,30 @@ $animationSpeed: 40s;
   /* Alinha horizontalmente no centro */
   margin-left: 1rem;
 
+}
+
+.txt_faq{
+  margin-left: 3rem;
+}
+
+.btn_faq{
+  height: 4rem ;
+}
+
+.question.clicked{
+  border-radius: 1rem 1rem 0 0;
+}
+
+.txt_faq{
+  margin-left: 3rem;
+}
+
+.btn_faq{
+  height: 4rem ;
+}
+
+.question.clicked{
+  border-radius: 1rem 1rem 0 0;
 }
 
 .txt_faq{
