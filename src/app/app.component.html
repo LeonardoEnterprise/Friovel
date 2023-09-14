@@ -1,1 +1,4 @@
+<div *ngIf="(isLoading | async) === true" class="div_loading">
+  <app-loading></app-loading>
+</div>
 <router-outlet></router-outlet>

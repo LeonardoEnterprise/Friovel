@@ -4,7 +4,6 @@
   align-items: center;
   padding: 10px;
   background-color: #FFFAFF;
-  color: white;
   height: 65px;
 }
 
@@ -13,22 +12,17 @@
   margin-left: 2rem;
 }
 
-.options ul {
+.options nav {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-.options li {
-  margin-left: 20px;
-}
-
 .options a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
   margin-right: 2rem;
-
+  margin-left: 20px;
   color: #000;
   text-align: center;
   font-family: 'Inter', sans-serif;
@@ -36,4 +30,22 @@
   font-style: normal;
   font-weight: 700;
   line-height: 20px; /* 76.923% */
+  position: relative;
+  padding: 0px 0px 5px 0px;
+}
+
+nav a::after{
+  content: "";
+  width: 0%;
+  height: 4px;
+  background-color: var(--secundary-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+nav a:hover::after{
+  width: 100%;
+  color: var(--secundary-color);
 }

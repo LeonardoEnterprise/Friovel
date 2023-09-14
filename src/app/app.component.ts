@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
+import { LoadingService } from './service/loading/loading.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Friovel';
+  constructor(private loadingService: LoadingService) { }
+
+  get isLoading(): Observable<boolean> {
+    return this.loadingService.isLoading();
+  }
 }
