@@ -31,12 +31,12 @@ export class HomeComponent {
     { src: '../assets/outdoors/background3.svg'},
     { src: '../assets/outdoors/background4.svg'},
     { src: '../assets/outdoors/background5.svg'},
-    { src: '../assets/outdoors/background6.svg'},
-    { src: '../assets/outdoors/background7.svg'},
+    // { src: '../assets/outdoors/background6.svg'},
+    // { src: '../assets/outdoors/background7.svg'},
     { src: '../assets/outdoors/background8.svg', alt: 'Valores da empresa', content: 'Venha conhecer nossa empressa com visita agendada.', h1: 'Valores da empresa', button: 'Agendar'},
     { src: '../assets/outdoors/background9.svg', alt: 'Muito obrigado', content: 'Agradecemos a todos os nossos caminhoneiros pelo excelente trabalho e dedicação!', h1: 'Muito obrigado'},
-    { src: '../assets/outdoors/background10.svg'},
-    { src: '../assets/outdoors/background11.svg'},
+    // { src: '../assets/outdoors/background10.svg'},
+    // { src: '../assets/outdoors/background11.svg'},
     { src: '../assets/outdoors/background12.svg', alt: 'Café da manhã santa clara.', h1: 'O café da manhã que sua familia merece!'},
     { src: '../assets/outdoors/background13.svg'}
   ]

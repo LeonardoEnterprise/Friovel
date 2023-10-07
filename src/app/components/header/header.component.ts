@@ -8,10 +8,17 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   isHomeRoute: boolean | undefined;
+  isMenuOpen = true;
+
 
   constructor(private router: Router) {
     this.router.events.subscribe(() => {
       this.isHomeRoute = this.router.url === '/home';
     });
+  }
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+    console.log("aaaaaaaaaaaaaaa");
+    
   }
 }

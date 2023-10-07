@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <header class="header">
   <div class="logo">
     <img src="../assets/logo friovel cortada.png" alt="Logo da Empresa">
@@ -9,10 +13,28 @@
       <a class="sidebar_options" href="/sellers">Vendas</a>
       <a class="sidebar_options" href="/catalogs">Catálogos</a>
       <div class="icon_menu">
-        <button mat-icon-button >
+        <button mat-icon-button (click)="toggleMenu()">
           <mat-icon class="mat-18">menu</mat-icon>
         </button>
       </div>
     </nav>
   </div>
 </header>
+
+<div class="menu_mobile" [ngClass]="{ 'open': isMenuOpen }">
+  <div class="menu_content">
+    <div class="menu_options">
+      <a href="/home">Home</a>
+      <a href="/contact">Contatos</a>
+      <a href="/sellers">Vendas</a>
+      <a href="/catalogs">Catálogos</a>
+    </div>
+    <div class="socials">
+      <h2>Redes sociais</h2>
+      <a target="_blank" href="https://www.facebook.com/friovelpb/" class="fa-brands fa-facebook"></a>
+      <a target="_blank" href="https://www.instagram.com/friovel/" class="fa-brands fa-instagram"></a>
+      <a target="_blank" href="https://www.tiktok.com/friovel/" class="fa-brands fa-tiktok"></a>
+      <a target="_blank" href="https://www.linkedin.com/friovel/" class="fa-brands fa-linkedin"></a>
+    </div>
+  </div>
+</div>

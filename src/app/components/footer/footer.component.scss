@@ -145,10 +145,6 @@ a[href] {
 }
 
 @media (width >= 640px) {
-  footer {
-
-  }
-
   footer.top .links {
     grid-template-columns: repeat(4, 1fr);
     margin-right: 50px;
