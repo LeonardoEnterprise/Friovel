@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-
 html,
 body {
   width: 100%;
@@ -91,7 +89,8 @@ h1 {
   width: 100%;
 }
 
-.top-bar, .bottom-bar {
+.top-bar,
+.bottom-bar {
   background-color: var(--principal-color);
   /* Cor da barra superior */
 }
@@ -124,8 +123,10 @@ h1 {
 
 .slide-indicators {
   z-index: 888;
-  position: absolute; /* Alterado para position: absolute */
-  bottom: 2rem; /* Define a distância da borda inferior */
+  position: absolute;
+  /* Alterado para position: absolute */
+  bottom: 2rem;
+  /* Define a distância da borda inferior */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -141,7 +142,9 @@ h1 {
     transition: background-color 0.3s ease-in-out;
 
     &.active {
-      background-color: var(--principal-color); // Cor de marcação para o slide atual
+      background-color: var(
+        --principal-color
+      ); // Cor de marcação para o slide atual
     }
   }
 }
@@ -152,11 +155,15 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 0; /* Começa com largura zero para que não seja visível inicialmente */
+  width: 0;
+  /* Começa com largura zero para que não seja visível inicialmente */
   height: 100%;
-  transition: width 0.5s ease-in-out; /* Transição de largura (0,5 segundos) */
-  background-color: var(--principal-color); /* Cor de fundo que será animada */
-  z-index: 999; /* Certifique-se de que a cobertura está acima da imagem */
+  transition: width 0.5s ease-in-out;
+  /* Transição de largura (0,5 segundos) */
+  background-color: var(--principal-color);
+  /* Cor de fundo que será animada */
+  z-index: 999;
+  /* Certifique-se de que a cobertura está acima da imagem */
 }
 
 .title-content {
@@ -210,22 +217,32 @@ h1 {
   margin-bottom: 40px;
 
   &::before {
-    content: ""; /* Conteúdo vazio, o elemento atuará como fundo */
-    position: absolute; /* Define a posição absoluta para que o elemento cubra o texto */
-    top: 0; /* Alinha o topo do elemento com o topo do texto */
-    left: 0; /* Alinha a esquerda do elemento com a esquerda do texto */
-    right: 0; /* Alinha a direita do elemento com a direita do texto */
-    bottom: 0; /* Alinha o fundo do elemento com o fundo do texto */
-    background-color: var(--secundary-color); /* Cor de fundo do elemento pseudo-elemento */
-    z-index: -1; /* Coloca o elemento pseudo-elemento atrás do texto */
-    opacity: 0.6; /* Opacidade do elemento pseudo-elemento */
+    content: "";
+    /* Conteúdo vazio, o elemento atuará como fundo */
+    position: absolute;
+    /* Define a posição absoluta para que o elemento cubra o texto */
+    top: 0;
+    /* Alinha o topo do elemento com o topo do texto */
+    left: 0;
+    /* Alinha a esquerda do elemento com a esquerda do texto */
+    right: 0;
+    /* Alinha a direita do elemento com a direita do texto */
+    bottom: 0;
+    /* Alinha o fundo do elemento com o fundo do texto */
+    background-color: var(--secundary-color);
+    /* Cor de fundo do elemento pseudo-elemento */
+    z-index: -1;
+    /* Coloca o elemento pseudo-elemento atrás do texto */
+    opacity: 0.6;
+    /* Opacidade do elemento pseudo-elemento */
   }
 }
 
 .home .content h1 span {
   font-size: 1.2em;
   font-weight: 600;
-  text-shadow: 20px 20px 40px rgba(0, 0, 2, 2 ); /* Adiciona uma sombra */
+  text-shadow: 20px 20px 40px rgba(0, 0, 2, 2);
+  /* Adiciona uma sombra */
 }
 
 .home .content p {
@@ -355,11 +372,13 @@ h1 {
   margin-top: 2rem;
 
   .recipe_txt {
-    flex: 1; /* Ocupa todo o espaço disponível à esquerda da imagem */
+    flex: 1;
+    /* Ocupa todo o espaço disponível à esquerda da imagem */
     max-width: 800px;
     text-align: left;
     margin-left: 4rem;
-    margin-right: 2rem; /* Adiciona um espaço à direita do bloco com classe .block_one */
+    margin-right: 2rem;
+    /* Adiciona um espaço à direita do bloco com classe .block_one */
 
     .recipe_p {
       font-size: 1.1rem;
@@ -369,22 +388,29 @@ h1 {
   }
 
   .recipe_img {
-    flex: 1; /* Ocupa todo o espaço disponível à direita do texto */
-    text-align: center; /* Alinha a imagem à direita */
+    flex: 1;
+    /* Ocupa todo o espaço disponível à direita do texto */
+    text-align: center;
+    /* Alinha a imagem à direita */
 
     img {
-      max-width: 100%; /* Garante que a imagem não ultrapasse a largura do bloco */
+      max-width: 100%;
+      /* Garante que a imagem não ultrapasse a largura do bloco */
       height: auto;
-      max-height: 400px; /* Define uma altura máxima para a imagem */
+      max-height: 400px;
+      /* Define uma altura máxima para a imagem */
     }
   }
 
   @media (max-width: 800px) {
-    flex-direction: column; /* Altera a direção do flex para coluna em dispositivos móveis */
+    flex-direction: column;
+    /* Altera a direção do flex para coluna em dispositivos móveis */
 
     .recipe_txt {
-      margin-right: 0; /* Remove a margem à direita em dispositivos móveis */
-      margin-left: 0; /* Remove a margem esquerda em dispositivos móveis */
+      margin-right: 0;
+      /* Remove a margem à direita em dispositivos móveis */
+      margin-left: 0;
+      /* Remove a margem esquerda em dispositivos móveis */
 
       .btn_group {
         max-width: 100%;
@@ -398,7 +424,8 @@ h1 {
 
   @media (min-width: 769px) and (max-width: 1024px) {
     .recipe_txt {
-      margin-right: 1rem; /* Espaçamento menor em telas médias */
+      margin-right: 1rem;
+      /* Espaçamento menor em telas médias */
     }
   }
 }
@@ -409,7 +436,11 @@ h1 {
 @import "~slick-carousel/slick/slick-theme.css";
 
 @mixin white-gradient {
-  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 $animationSpeed: 40s;
