@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { slideAnimation } from 'src/app/animations/slideAnimations';
 import { LoadingService } from 'src/app/service/loading/loading.service';
-
 declare var $: any; // Declare a variável global $ para acessar o jQuery
 
 interface FaqQuestion {
@@ -13,13 +11,8 @@ interface FaqQuestion {
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  animations: [slideAnimation]
 })
 export class HomeComponent {
-
-  constructor(private loadingService: LoadingService){
-
-  }
 
   logos = [
     { src: '../assets/partnersLogos/logo1.gif', alt: 'Marca 1', href:'https://www.latcarolina.com.br/'},
@@ -33,27 +26,63 @@ export class HomeComponent {
   ];
 
   outdoors = [
-    { src: '../assets/outdoors/Slide1.svg', alt: 'Valores da empresa' },
-    { src: '../assets/outdoors/Slide2.svg', alt: 'Crianças cozinhando' },
-    { src: '../assets/outdoors/Slide2teste.svg', alt: 'Crianças cozinhando' },
-    { src: '../assets/outdoors/Slide3.svg', alt: 'Tabua de frios' },
-    { src: '../assets/outdoors/Slide4.svg', alt: 'Familia feliz' },
-    { src: '../assets/outdoors/Slide5.svg', alt: 'Linhas de padaria' },
-    { src: '../assets/outdoors/Slide6.svg', alt: 'Padeiro' },
+    // { src: '../assets/outdoors/background1.svg'},
+    { src: '../assets/outdoors/background2.svg', alt: 'Tábua de frios', content: 'Conheça a Frireggio, nossa marca de produtos voltada para quem preza pela qualidade.', h1: 'Frireggio', button: 'Conhecer' },
+    { src: '../assets/outdoors/background3.svg'},
+    { src: '../assets/outdoors/background4.svg'},
+    { src: '../assets/outdoors/background5.svg'},
+    { src: '../assets/outdoors/background6.svg'},
+    { src: '../assets/outdoors/background7.svg'},
+    { src: '../assets/outdoors/background8.svg', alt: 'Valores da empresa', content: 'Venha conhecer nossa empressa com visita agendada.', h1: 'Valores da empresa', button: 'Agendar'},
+    { src: '../assets/outdoors/background9.svg', alt: 'Muito obrigado', content: 'Agradecemos a todos os nossos caminhoneiros pelo excelente trabalho e dedicação!', h1: 'Muito obrigado'},
+    { src: '../assets/outdoors/background10.svg'},
+    { src: '../assets/outdoors/background11.svg'},
+    { src: '../assets/outdoors/background12.svg', alt: 'Café da manhã santa clara.', h1: 'O café da manhã que sua familia merece!'},
+    { src: '../assets/outdoors/background13.svg'}
   ]
 
   currentImageIndex = 0;
   currentImage = this.outdoors[this.currentImageIndex];
+  slideAnimationActive = false;
+
+  constructor(private loadingService: LoadingService){}
 
   nextImage() {
     this.currentImageIndex = (this.currentImageIndex + 1) % this.outdoors.length;
     this.currentImage = this.outdoors[this.currentImageIndex];
   }
 
-  prevImage() {
-    this.currentImageIndex =
-      (this.currentImageIndex - 1 + this.outdoors.length) % this.outdoors.length;
-    this.currentImage = this.outdoors[this.currentImageIndex];
+  // prevImage() {
+  //   this.currentImageIndex =
+  //     (this.currentImageIndex - 1 + this.outdoors.length) % this.outdoors.length;
+  //   this.currentImage = this.outdoors[this.currentImageIndex];
+  // }
+
+  goToSlide(index: number): void {
+    // Esta função é chamada quando você clica em um indicador de slide
+
+    // Remova a classe 'active' da div de cobertura para ocultá-la
+    const cover = document.querySelector('.cover') as HTMLElement;
+    cover.classList.remove('active');
+
+    // Aguarde um pequeno intervalo (por exemplo, 100ms) para permitir a transição da classe
+    setTimeout(() => {
+      // Atualize a largura da div de cobertura para cobrir a imagem
+      cover.style.width = '100%';
+
+      // Aguarde a conclusão da animação (0,5 segundos) e, em seguida, atualize o índice da imagem atual
+      setTimeout(() => {
+        this.currentImageIndex = index;
+
+        // Reinicie a largura da div de cobertura para zero
+        cover.style.width = '0';
+
+        // Adicione novamente a classe 'active' para a próxima animação
+        setTimeout(() => {
+          cover.classList.add('active');
+        }, 10);
+      }, 500); // Tempo de transição (0,5 segundos)
+    }, 100);
   }
 
   private interval: any;

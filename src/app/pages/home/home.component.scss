@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
 html,
 body {
   width: 100%;
@@ -19,10 +21,7 @@ h1 {
   font-size: 3rem;
   font-style: normal;
   font-weight: 800;
-  line-height: 2rem;
-  /* 100% */
-  line-height: 2rem;
-  /* 100% */
+  line-height: 3rem;
 }
 
 .btn_blue {
@@ -82,11 +81,8 @@ h1 {
 //! Parte do carrosel inicial
 .outdoor {
   position: relative;
-  //  height: 45rem; /* Defina a altura desejada */
   width: 100%;
-  /* Defina a largura horizontal */
   background-color: var(--principal-color);
-  /* Apenas para visualização */
 }
 
 .bar {
@@ -95,14 +91,9 @@ h1 {
   width: 100%;
 }
 
-.top-bar {
+.top-bar, .bottom-bar {
   background-color: var(--principal-color);
   /* Cor da barra superior */
-}
-
-.bottom-bar {
-  background-color: var(--principal-color);
-  /* Cor da barra inferior */
 }
 
 .image-container {
@@ -112,40 +103,166 @@ h1 {
 
 .image {
   width: 100%;
-  height: auto;
+  height: 100%;
   transition: transform 0.5s ease-in-out;
 }
 
-.btn_outdoor_left,
-.btn_outdoor_right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4rem;
-  /* Defina a largura desejada para os botões */
-  height: 4rem;
-  /* Defina a altura desejada para os botões */
-  background-color: var(--white-color);
-  /* Apenas para visualização */
-  border: none;
-  /* Remove a borda padrão do botão */
+//? Estilização especial
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-indicators {
+  z-index: 888;
+  position: absolute; /* Alterado para position: absolute */
+  bottom: 2rem; /* Define a distância da borda inferior */
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  cursor: pointer;
-  border-radius: 100%;
+  align-items: center;
+
+  .slide-indicator {
+    width: 18px;
+    height: 18px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &.active {
+      background-color: var(--principal-color); // Cor de marcação para o slide atual
+    }
+  }
 }
 
-.btn_outdoor_left {
-  left: 10px;
-  /* Ajuste a posição do botão esquerdo */
+/* Adicione esta classe para controlar a transição */
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; /* Começa com largura zero para que não seja visível inicialmente */
+  height: 100%;
+  transition: width 0.5s ease-in-out; /* Transição de largura (0,5 segundos) */
+  background-color: var(--principal-color); /* Cor de fundo que será animada */
+  z-index: 999; /* Certifique-se de que a cobertura está acima da imagem */
 }
 
-.btn_outdoor_right {
-  right: 10px;
-  /* Ajuste a posição do botão direito */
+.title-content {
+  color: var(--principal-color) !important;
+  font-size: 3rem;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
 }
 
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--secundary-color);
+}
+
+.home:before {
+  z-index: 777;
+  content: "";
+  position: absolute;
+  background: rgba(251, 3, 3, 0.034);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.home .content {
+  z-index: 888;
+  color: #fff;
+  width: 70%;
+  margin-top: 50px;
+  display: none;
+  margin-left: 2rem;
+  text-shadow: 2px 2px 4px hsla(0, 0%, 0%, 0.8);
+}
+
+.home .content.active {
+  display: block;
+}
+
+.home .content h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 75px;
+  margin-bottom: 40px;
+
+  &::before {
+    content: ""; /* Conteúdo vazio, o elemento atuará como fundo */
+    position: absolute; /* Define a posição absoluta para que o elemento cubra o texto */
+    top: 0; /* Alinha o topo do elemento com o topo do texto */
+    left: 0; /* Alinha a esquerda do elemento com a esquerda do texto */
+    right: 0; /* Alinha a direita do elemento com a direita do texto */
+    bottom: 0; /* Alinha o fundo do elemento com o fundo do texto */
+    background-color: var(--secundary-color); /* Cor de fundo do elemento pseudo-elemento */
+    z-index: -1; /* Coloca o elemento pseudo-elemento atrás do texto */
+    opacity: 0.6; /* Opacidade do elemento pseudo-elemento */
+  }
+}
+
+.home .content h1 span {
+  font-size: 1.2em;
+  font-weight: 600;
+  text-shadow: 20px 20px 40px rgba(0, 0, 2, 2 ); /* Adiciona uma sombra */
+}
+
+.home .content p {
+  margin-bottom: 65px;
+}
+
+.home .content a {
+  background: var(--principal-color);
+  padding: 15px 35px;
+  color: var(--white-color);
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.home .content a:hover {
+  background: var(--secundary-color);
+  color: #fff;
+}
+
+.home img {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 560px) {
+  .home .content h1 {
+    font-size: 3em;
+    line-height: 60px;
+  }
+}
 
 //! Parte da nossa historia
 .history_txt {
@@ -195,11 +312,13 @@ h1 {
 .operation_txt {
   flex: 1;
   padding: 2rem;
+  text-align: left;
 }
 
 .operation_p {
   margin-bottom: 2rem;
   max-width: 60%;
+  text-align: left;
 }
 
 .btn_group {
@@ -225,17 +344,69 @@ h1 {
   height: auto;
 }
 
+//! Parte do campo de receitas
+
+/* Estilos gerais */
+.recipe {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 40px;
+  margin-top: 2rem;
+
+  .recipe_txt {
+    flex: 1; /* Ocupa todo o espaço disponível à esquerda da imagem */
+    max-width: 800px;
+    text-align: left;
+    margin-left: 4rem;
+    margin-right: 2rem; /* Adiciona um espaço à direita do bloco com classe .block_one */
+
+    .recipe_p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  }
+
+  .recipe_img {
+    flex: 1; /* Ocupa todo o espaço disponível à direita do texto */
+    text-align: center; /* Alinha a imagem à direita */
+
+    img {
+      max-width: 100%; /* Garante que a imagem não ultrapasse a largura do bloco */
+      height: auto;
+      max-height: 400px; /* Define uma altura máxima para a imagem */
+    }
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column; /* Altera a direção do flex para coluna em dispositivos móveis */
+
+    .recipe_txt {
+      margin-right: 0; /* Remove a margem à direita em dispositivos móveis */
+      margin-left: 0; /* Remove a margem esquerda em dispositivos móveis */
+
+      .btn_group {
+        max-width: 100%;
+      }
+    }
+
+    .recipe_img {
+      margin-top: 2rem;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .recipe_txt {
+      margin-right: 1rem; /* Espaçamento menor em telas médias */
+    }
+  }
+}
+
 //! Parte carrosel de logos
 
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
-
-// .carousel {
-//   display: flex;
-//   overflow: hidden;
-//   width: 100%;
-// }
-
 
 @mixin white-gradient {
   background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
@@ -250,7 +421,7 @@ $animationSpeed: 40s;
   }
 
   100% {
-    transform: translateX(calc(-250px * 7))
+    transform: translateX(calc(-250px * 7));
   }
 }
 
@@ -273,7 +444,7 @@ $animationSpeed: 40s;
 // Styling
 .slider {
   background: white;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 100px;
   margin: auto;
   overflow: hidden;
@@ -286,7 +457,7 @@ $animationSpeed: 40s;
     content: "";
     height: 100px;
     position: absolute;
-    width: 200px;
+    width: 150px;
     z-index: 2;
   }
 
@@ -316,7 +487,6 @@ $animationSpeed: 40s;
 
 //! Parte faq de perguntas
 
-
 .faq-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -335,7 +505,6 @@ $animationSpeed: 40s;
 }
 
 .question {
-
   font-size: 18px;
   color: var(--white-color);
   background-color: var(--secundary-color);
@@ -380,41 +549,82 @@ $animationSpeed: 40s;
   justify-content: center;
   /* Alinha horizontalmente no centro */
   margin-left: 1rem;
-
 }
 
-.txt_faq{
+.txt_faq {
   margin-left: 3rem;
 }
 
-.btn_faq{
-  height: 4rem ;
+.btn_faq {
+  height: 4rem;
 }
 
-.question.clicked{
+.question.clicked {
   border-radius: 1rem 1rem 0 0;
 }
 
-.txt_faq{
+.txt_faq {
   margin-left: 3rem;
 }
 
-.btn_faq{
-  height: 4rem ;
+.btn_faq {
+  height: 4rem;
 }
 
-.question.clicked{
+.question.clicked {
   border-radius: 1rem 1rem 0 0;
 }
 
-.txt_faq{
+.txt_faq {
   margin-left: 3rem;
 }
 
-.btn_faq{
-  height: 4rem ;
+.btn_faq {
+  height: 4rem;
 }
 
-.question.clicked{
+.question.clicked {
   border-radius: 1rem 1rem 0 0;
+}
+
+//! Responsividade
+
+@media screen and (max-width: 920px) {
+  .btn_outdoor_left,
+  .btn_outdoor_right {
+    display: none;
+  }
+
+  .history_img {
+    display: none;
+  }
+
+  .operation_img {
+    display: none;
+  }
+
+  .history_txt {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .operation_p {
+    max-width: 100%;
+  }
+
+  .operation_txt {
+    padding: 0rem;
+  }
+
+  .operation {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .faq_h1 {
+    font-size: 2rem;
+  }
 }

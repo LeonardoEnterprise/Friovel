@@ -15,6 +15,16 @@ import { ConfigurationComponent } from './pages/configuration/configuration.comp
 import { LoginComponent } from './pages/login/login.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { LoadingService } from './service/loading/loading.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { RevenuesComponent } from './pages/revenues/revenues.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +39,22 @@ import { LoadingService } from './service/loading/loading.service';
     SellersComponent,
     ConfigurationComponent,
     LoginComponent,
-    LoadingComponent
+    LoadingComponent,
+    RevenuesComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatExpansionModule
+
+
   ],
   providers: [LoadingService],
   bootstrap: [AppComponent]

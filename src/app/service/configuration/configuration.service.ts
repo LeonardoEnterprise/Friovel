@@ -5,20 +5,20 @@ import { Injectable } from '@angular/core';
 })
 export class ConfigurationService {
 
-private isAuthenticated = false;
+// private isAuthenticated = false;
 
-login(): void {
-    // Simule um processo de login
-    this.isAuthenticated = true;
-  }
+// login(): void {
+//     // Simule um processo de login
+//     this.isAuthenticated = true;
+//   }
 
-  logout(): void {
-    // Simule um processo de logout
-    this.isAuthenticated = false;
-  }
+//   logout(): void {
+//     // Simule um processo de logout
+//     this.isAuthenticated = false;
+//   }
 
-  isAuthenticated(): boolean {
-    return this.isAuthenticated;
-  }
-  constructor() { }
+//   isAuthenticated(): boolean {
+//     return this.isAuthenticated;
+//   }
+//   constructor() { }
 }

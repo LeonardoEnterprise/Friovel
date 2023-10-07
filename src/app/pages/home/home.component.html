@@ -9,30 +9,23 @@
 <app-header></app-header>
 
 <body>
-
   <section class="carrosel-banner">
     <div class="bar top-bar"></div>
     <div class="outdoor" (mouseenter)="stopAutoSlide()" (mouseleave)="startAutoSlide()">
-      <div class="image-container">
+      <div class="image-container home">
         <img [src]="outdoors[currentImageIndex].src" [alt]="outdoors[currentImageIndex].alt" class="image" />
-        <button class="btn_outdoor_left" (click)="prevImage()">
-          <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90" fill="none">
-            <path
-              d="M0 45C0 20.1472 20.1472 0 45 0C69.8528 0 90 20.1472 90 45C90 69.8528 69.8528 90 45 90C20.1472 90 0 69.8528 0 45Z"
-              fill="#1F1B18" />
-            <path
-              d="M82.4054 44.7027C82.4054 49.6539 81.4302 54.5566 79.5354 59.1309C77.6407 63.7052 74.8635 67.8615 71.3625 71.3625C67.8615 74.8636 63.7052 77.6407 59.1309 79.5355C54.5566 81.4302 49.6539 82.4054 44.7027 82.4054C34.7033 82.4054 25.1135 78.4332 18.0429 71.3625C10.9722 64.2919 6.99999 54.7021 6.99999 44.7027C6.99999 39.7515 7.9752 34.8488 9.86994 30.2745C11.7647 25.7002 14.5418 21.5439 18.0429 18.0429C25.1135 10.9722 34.7033 7 44.7027 7C54.7021 7 64.2919 10.9722 71.3625 18.0429C78.4332 25.1135 82.4054 34.7033 82.4054 44.7027ZM25.8513 44.7027L44.7027 63.5541L44.7027 52.2432L59.7838 52.2432L59.7838 37.1622H44.7027L44.7027 25.8514L25.8513 44.7027Z"
-              fill="#FFFAFF" />
-          </svg>
-        </button>
-        <button class="btn_outdoor_right" (click)="nextImage()">
-          <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90" fill="none">
-            <circle cx="45" cy="45" r="45" fill="#1F1B18" />
-            <path
-              d="M7.29736 45.0001C7.29736 40.0489 8.27257 35.1462 10.1673 30.5719C12.062 25.9975 14.8392 21.8412 18.3402 18.3402C21.8412 14.8392 25.9976 12.062 30.5719 10.1673C35.1462 8.27255 40.0489 7.29735 45.0001 7.29735C54.9994 7.29735 64.5893 11.2696 71.6599 18.3402C78.7305 25.4108 82.7028 35.0007 82.7028 45.0001C82.7028 49.9512 81.7276 54.854 79.8328 59.4283C77.9381 64.0026 75.1609 68.1589 71.6599 71.6599C64.5893 78.7305 54.9994 82.7028 45.0001 82.7028C35.0007 82.7028 25.4109 78.7305 18.3402 71.6599C11.2696 64.5893 7.29736 54.9994 7.29736 45.0001ZM63.8514 45.0001L45.0001 26.1487L45.0001 37.4595L29.919 37.4595L29.919 52.5406L45.0001 52.5406L45.0001 63.8514L63.8514 45.0001Z"
-              fill="#FFFAFF" />
-          </svg>
-        </button>
+        <div class="cover"></div>
+        <div class="content active">
+          <h1 class="title-content">{{ outdoors[currentImageIndex].h1 }}</h1>
+          <p>{{ outdoors[currentImageIndex].content }}</p>
+          <a *ngIf="outdoors[currentImageIndex].button!; undefined" href="#">{{ outdoors[currentImageIndex].button
+            }}</a>
+        </div>
+        <div class="bar bottom-bar"></div>
+        <div class="slide-indicators" #slideIndicators>
+          <div *ngFor="let outdoor of outdoors; let i = index" class="slide-indicator"
+            [class.active]="i === currentImageIndex" (click)="goToSlide(i)"></div>
+        </div>
       </div>
     </div>
     <div class="bar bottom-bar"></div>
@@ -90,34 +83,44 @@
           produtos para panificação, confeitaria, sorveteria, food service.
           Procurando levar aos nossos clientes, consumidores e amigos produtos
           da melhor qualidade, de marcas consagradas no mercado e empresas de
-          grande gabarito e conceito junto ao consumidor. <br><br>
+          grande gabarito e conceito junto ao consumidor. <br /><br />
 
-          <strong>Fazemos isso com muito amor e carinho, pois nosso cliente sempre merece o melhor.</strong>
+          <strong>Fazemos isso com muito amor e carinho, pois nosso cliente sempre
+            merece o melhor.</strong>
         </p>
       </div>
     </div>
   </section>
 
+  <section class="frireggio"></section>
+
   <section class="operation">
     <div class="operation_txt">
       <h1>Atuação</h1>
       <p class="operation_p">
-        A Friovel Distribuidora de Alimentos cresceu significativamente ao longo dos anos. Ela expandiu suas operações
-        para diversas regiões do Brasil, atendendo uma ampla gama de produtos, incluindo lácteos, frigorificados,
-        produtos para panificação, confeitaria, sorveteria e food service.
-        <br><br>
-        Atualmente, a empresa tem um Centro de Distribuição centralizado em Pato Branco, no Paraná, de onde atende o
-        sudoeste, oeste, centro-oeste e sul do Paraná, bem como o oeste de Santa Catarina. Seu compromisso com produtos
-        de alta qualidade e marcas renomadas, juntamente com seu foco no atendimento ao cliente, fazem dela uma presença
-        notável e confiável no mercado nacional. <br><br><strong>A Friovel é movida pela paixão em oferecer o melhor aos seus clientes,
-          mantendo seu compromisso com a excelência em todas as regiões do Brasil.</strong>
+        A Friovel Distribuidora de Alimentos cresceu significativamente ao
+        longo dos anos. Ela expandiu suas operações para diversas regiões do
+        Brasil, atendendo uma ampla gama de produtos, incluindo lácteos,
+        frigorificados, produtos para panificação, confeitaria, sorveteria e
+        food service.
+        <br /><br />
+        Atualmente, a empresa tem um Centro de Distribuição centralizado em
+        Pato Branco, no Paraná, de onde atende o sudoeste, oeste, centro-oeste
+        e sul do Paraná, bem como o oeste de Santa Catarina. Seu compromisso
+        com produtos de alta qualidade e marcas renomadas, juntamente com seu
+        foco no atendimento ao cliente, fazem dela uma presença notável e
+        confiável no mercado nacional. <br /><br /><strong>A Friovel é movida pela paixão em oferecer o melhor aos seus
+          clientes, mantendo seu compromisso com a excelência em todas as
+          regiões do Brasil.</strong>
       </p>
       <div class="btn_group">
         <button class="btn_blue">
-          <span class="btn_text">Procurar vendedor</span> <img src="../assets/icons/user.svg" alt="" />
+          <span class="btn_text">Procurar vendedor</span>
+          <img src="../assets/icons/user.svg" alt="" />
         </button>
         <button class="btn_orange">
-          <span class="btn_text">Entre em contato</span> <img src="../assets/icons/cellphone.svg" alt="" />
+          <span class="btn_text">Entre em contato</span>
+          <img src="../assets/icons/cellphone.svg" alt="" />
         </button>
       </div>
     </div>
@@ -126,16 +129,41 @@
     </div>
   </section>
 
+  <section class="recipe">
+    <div class="recipe_txt">
+      <h1>Caderno de receitas</h1>
+      <p class="recipe_p">
+        <strong>Torne-se um Chef Colaborador no Nosso Blog de Receitas com Produtos Friovel!</strong> <br>
+        Você é um mestre na cozinha? Tem uma receita especial que deseja compartilhar com o mundo? Quer mostrar seu
+        talento culinário e inspirar outros amantes da gastronomia? Então, você está no lugar certo! <br><br>
+
+        No blog de receitas com produtos Friovel, valorizamos a diversidade de sabores e a criatividade na cozinha.
+        Queremos convidar você a se tornar um Chef Colaborador e compartilhar suas receitas deliciosas e inovadoras com
+        nossa comunidade.
+      </p>
+      <div class="btn_group">
+        <button class="btn_blue">
+          <span class="btn_text">Enviar receita!</span>
+        </button>
+      </div>
+      </div>
+      <div class="recipe_img">
+        <img src="../assets/recipe.svg" alt="" />
+      </div>
+  </section>
+
   <section class="partners">
     <div class="line_blue"></div>
     <div class="line_yellow"></div>
     <div class="slider">
       <div class="slide-track">
         <div *ngFor="let logo of logos; let i = index" class="slide">
-          <a target="_blank" href="{{logo.href}}"><img [src]="logo.src" [alt]="logo.alt" height="95" width="140" /></a>
+          <a target="_blank" href="{{ logo.href }}"><img [src]="logo.src" [alt]="logo.alt" height="95"
+              width="140" /></a>
         </div>
         <div *ngFor="let logo of logos; let i = index" class="slide">
-          <a target="_blank" href="{{logo.href}}"><img [src]="logo.src" [alt]="logo.alt" height="95" width="140" /></a>
+          <a target="_blank" href="{{ logo.href }}"><img [src]="logo.src" [alt]="logo.alt" height="95"
+              width="140" /></a>
         </div>
       </div>
     </div>
@@ -145,7 +173,7 @@
 
   <section class="faq">
     <div class="faq-container">
-      <h1>Perguntas Frequentes</h1>
+      <h1 class="faq_h1">Perguntas Frequentes</h1>
       <div class="faq-item" *ngFor="let question of faqList">
         <div class="question" [class.clicked]="question.isClicked" (click)="toggleAnswer(question)">
           <h2 class="question txt_faq">{{ question.question }}</h2>

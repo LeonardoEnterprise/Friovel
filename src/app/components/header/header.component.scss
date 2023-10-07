@@ -57,9 +57,20 @@ nav a:hover::after{
 height: 60px;
 flex-shrink: 0;
 border-radius: 50px;
-
 display: flex;
 justify-content: center; /* Alinha horizontalmente no centro */
 align-items: center; /* Alinha verticalmente no centro */
 
 }
+
+@media screen and (max-width: 920px) {
+.sidebar_options{
+  display: none;
+}
+}
+
+@media screen and (min-width: 921px) {
+  .icon_menu{
+    display: none;
+  }
+  }
