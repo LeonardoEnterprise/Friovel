@@ -10,13 +10,15 @@ import { CatalogsComponent } from './pages/catalogs/catalogs.component';
 import { LoadingComponent } from './components/loading/loading.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  // {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '**', redirectTo: '/home'},
+
   {path: 'home', component: HomeComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'sellers', component: SellersComponent},
-  {path: 'catalogs', component: CatalogsComponent},
+  // {path: 'contact', component: ContactComponent},
+  // {path: 'sellers', component: SellersComponent},
+  // {path: 'catalogs', component: CatalogsComponent},
   {path: 'config', component: ConfigurationComponent, canActivate: [configurationGuard]},
-  {path: 'login', component: LoginComponent},
+  // {path: 'login', component: LoginComponent},
   {path: 'loading', component: LoadingComponent}
 ];
 

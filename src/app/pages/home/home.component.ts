@@ -115,9 +115,9 @@ export class HomeComponent {
   }
 
   faqList = [
-    { question: 'O que é Angular?', answer: 'Angular é um framework de desenvolvimento web...', showAnswer: false, isClicked: false  },
-    { question: 'Como começar a usar Angular?', answer: 'Para começar com Angular, você precisa...', showAnswer: false, isClicked: false  },
-    { question: 'Qual a versão mais recente do Angular?', answer: 'A versão mais recente do Angular é...', showAnswer: false, isClicked: false  },
+    { question: 'A Friovel oferece serviços de entrega?', answer: 'Sim, a Friovel oferece serviços de entrega para seus clientes . A empresa tem uma frota de veículos próprios e uma equipe de motoristas experientes que garantem que os produtos sejam entregues com segurança e pontualidade.', showAnswer: false, isClicked: false  },
+    { question: 'Quais são as formas de pagamento aceitas pela Friovel?', answer: 'A Friovel aceita várias formas de pagamento para facilitar as transações para seus clientes. Isso pode incluir dinheiro, cartões de crédito/débito, transferências bancárias e até mesmo pagamentos digitais.', showAnswer: false, isClicked: false  },
+    { question: 'A Friovel oferece algum tipo de garantia para os serviços prestados?', answer: 'Sim, dependendo do produto a Friovel cobre em bonificação como forma de resarcimento pelo produto ter acabado vencendo em seu ponto de venda.', showAnswer: false, isClicked: false  },
     // Adicione mais perguntas e respostas aqui
   ];
 
